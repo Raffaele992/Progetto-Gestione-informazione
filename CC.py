@@ -9,7 +9,7 @@ def helloCallBack():
    msg = tkinter.messagebox.showinfo("Hello Python", "HelloWorld")
 
 
-L1 = tkinter.Label (top, text = "Inserisci al parola da cercare")
+L1 = tkinter.Label (top, text = "Inserisci la parola da cercare")
 L1.pack(side = tkinter.LEFT)
 
 E1 = tkinter.Entry(top, bd = 5, width = 50)
