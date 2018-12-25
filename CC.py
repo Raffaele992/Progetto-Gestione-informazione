@@ -1,23 +1,44 @@
-import tkinter
-import tkinter.messagebox
+from tkinter import *
 
-top = tkinter.Tk()
+class Window(Frame):
+    def __init__(self, master = None):
+        Frame.__init__(self, master)
+        self.master = master
+        self.init_window()
 
-top.geometry("750x500")
+    def init_window(self):
 
-def helloCallBack():
-   msg = tkinter.messagebox.showinfo("Hello Python", "HelloWorld")
+        # Window title
+        self.master.title("Progetto Gestione informazioni")
 
+        self.pack(fill = BOTH, expand = 1)
 
-L1 = tkinter.Label (top, text = "Inserisci la parola da cercare")
-L1.pack(side = tkinter.LEFT)
+        quitButton = Button(self, text = "Quit",command = self.client_exit)
 
-E1 = tkinter.Entry(top, bd = 5, width = 50)
-E1.pack(side = tkinter.RIGHT)
+        quitButton.place(x = 175, y = 500)
 
+        menu = Menu(self.master)
+        self.master.config(menu = menu)
 
-B = tkinter.Button (top, text = "Prova", command = helloCallBack)
+        file = Menu(menu)
 
-B.place(x = 125, y = 150)
-top.mainloop()
+        file.add_command(label = "Quit", command = self.client_exit)
 
+        menu.add_cascade(label = "File", menu = file)
+
+        edit = Menu(menu)
+
+        edit.add_command(label = "Undo")
+
+        menu.add_cascade(label = "Edit", menu = edit)
+
+    def client_exit(self):
+        exit()
+
+root = Tk()
+
+root.geometry("400x600")
+
+app = Window(root)
+
+root.mainloop()
