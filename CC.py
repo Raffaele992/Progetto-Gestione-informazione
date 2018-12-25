@@ -17,17 +17,23 @@ class Window(Frame):
 
         quitButton.place(x = 175, y = 500)
 
+        #Creation of the menu instance in which there are the objects
         menu = Menu(self.master)
         self.master.config(menu = menu)
 
+        #Creation of the object "File"
         file = Menu(menu)
 
+        #Adds the command "Quit" at the menu "File"
         file.add_command(label = "Quit", command = self.client_exit)
 
+        #Allow to show commands inside "File"
         menu.add_cascade(label = "File", menu = file)
 
+        #Creation of the object "Edit"
         edit = Menu(menu)
 
+        
         edit.add_command(label = "Undo")
 
         menu.add_cascade(label = "Edit", menu = edit)
