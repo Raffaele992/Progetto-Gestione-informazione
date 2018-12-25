@@ -1,45 +1,47 @@
 from tkinter import *
 
+
 class Window(Frame):
-    def __init__(self, master = None):
+    def __init__(self, master=None):
         Frame.__init__(self, master)
         self.master = master
         self.init_window()
 
     def init_window(self):
-
         # Window title
         self.master.title("Progetto Gestione informazioni")
 
-        self.pack(fill = BOTH, expand = 1)
+        self.pack(fill=BOTH, expand=1)
 
-        quitButton = Button(self, text = "Quit",command = self.client_exit)
+        quitButton = Button(self, text="Quit", command=self.client_exit)
 
-        quitButton.place(x = 175, y = 500)
+        quitButton.place(x=175, y=500)
 
-        #Creation of the menu instance in which there are the objects
+        # Creation of the menu instance in which there are the objects
         menu = Menu(self.master)
-        self.master.config(menu = menu)
+        self.master.config(menu=menu)
 
-        #Creation of the object "File"
+        # Creation of the object "File"
         file = Menu(menu)
 
-        #Adds the command "Quit" at the menu "File"
-        file.add_command(label = "Quit", command = self.client_exit)
+        # Allow to show commands inside "File"
+        menu.add_cascade(label="File", menu=file)
 
-        #Allow to show commands inside "File"
-        menu.add_cascade(label = "File", menu = file)
-
-        #Creation of the object "Edit"
+        # Creation of the object "Edit"
         edit = Menu(menu)
 
-        
-        edit.add_command(label = "Undo")
+        edit.add_command(label="Undo")
 
-        menu.add_cascade(label = "Edit", menu = edit)
+        menu.add_cascade(label="Edit", menu=edit)
+
+        #Adds a button in the menu which close the program
+        Exit = Menu(menu)
+        menu.add_command(label="Exit", command=self.client_exit)
+
 
     def client_exit(self):
         exit()
+
 
 root = Tk()
 
