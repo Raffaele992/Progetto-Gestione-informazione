@@ -1,0 +1,17 @@
+
+
+- mettere dei campi per la parte di ricerca testuale
+- bottoni per selezionare le tipologie messe nella traccia 
+  al posto di averle da dover scrivere se sono poche e/o più comode
+- mettere il bottone per la search da usare poi
+- togliere la parte file e menù nella parte superiore 
+  ( per ora non li usiamo affatto e non so se mai li useremo)
+- togliere il resizable e metterlo più largo, secondo me sarà necessario
+  con le label ecc.....
+- mettere in fondo o da qualche parte un campo di testo, non da mettere in
+  input dell'user ma che magari usiamo noi, per comunicare qualcosa visivamente
+  all'utente.
+
+        Per ora direi questo, Riccardo
+
+     
