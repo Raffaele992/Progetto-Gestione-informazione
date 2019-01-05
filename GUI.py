@@ -34,10 +34,9 @@ class Window(Frame):
 
         menu.add_cascade(label="Edit", menu=edit)
 
-        #Adds a button in the menu which close the program
-        Exit = Menu(menu)
-        menu.add_command(label="Exit", command=self.client_exit)
-
+        # Adds a button in the menu which close the program
+        exit = Menu(menu)
+        menu.add_command(label="exit", command=self.client_exit)
 
     def client_exit(self):
         exit()
