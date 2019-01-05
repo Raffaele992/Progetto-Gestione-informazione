@@ -1,0 +1,88 @@
+#: import Checkbox kivy.uix.checkbox
+
+MasterLayout:
+
+<MasterLayout>:
+    orientation: "vertical"
+    padding: 10
+    spacing: 10
+
+    GridLayout:
+
+        padding: 10
+        spacing: 10
+        cols:2
+
+        Label:
+            text: "Author:"
+            size_hint: (0.1, None)
+            height: 30
+        TextInput:
+            size_hint: (0.9, None)
+            height: 30
+            multiline: False
+
+        Label:
+            text: "Title:"
+            size_hint: (0.1, None)
+            height: 30
+        TextInput:
+            size_hint: (0.9, None)
+            height: 30
+            multiline: False
+
+    BoxLayout:
+        padding: 10
+        spacing: 10
+
+        Label:
+            text: "Look into:"
+            size_hint_x: 0.1
+
+        GridLayout:
+            padding: 10
+            spacing: 10
+            cols:6
+            row: 2
+
+
+            CheckBox:
+
+            AnchorLayout:
+                anchor_x: 'right'
+                Label:
+                    text: "PhD thesis"
+
+            CheckBox:
+
+            Label:
+                text: "Master Thesis"
+
+            CheckBox:
+
+            Label:
+                text: " Book"
+
+            CheckBox:
+
+            Label:
+                text: " Article"
+
+            CheckBox:
+
+            Label:
+                text: " CCCC"
+
+
+    GridLayout:
+        cols: 3
+        size_hint_y: 0.2
+        spacing: 40
+        Button:
+            text: "Search"
+
+        Button:
+            text: "Reset"
+
+        Button:
+            text: "Quit"

@@ -1,51 +1,33 @@
-from tkinter import *
+import kivy
+kivy.require("1.10.1")
+
+from kivy.app import App
+from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.gridlayout import GridLayout
+from kivy.uix.anchorlayout import AnchorLayout
+from kivy.properties import ObjectProperty
+from kivy.core.window import Window
+from kivy.uix.popup import Popup
 
 
-class Window(Frame):
-    def __init__(self, master=None):
-        Frame.__init__(self, master)
-        self.master = master
-        self.init_window()
-
-    def init_window(self):
-        # Window title
-        self.master.title("Progetto Gestione informazioni")
-
-        self.pack(fill=BOTH, expand=1)
-
-        quitButton = Button(self, text="Quit", command=self.client_exit)
-
-        quitButton.place(x=175, y=500)
-
-        # Creation of the menu instance in which there are the objects
-        menu = Menu(self.master)
-        self.master.config(menu=menu)
-
-        # Creation of the object "File"
-        file = Menu(menu)
-
-        # Allow to show commands inside "File"
-        menu.add_cascade(label="File", menu=file)
-
-        # Creation of the object "Edit"
-        edit = Menu(menu)
-
-        edit.add_command(label="Undo")
-
-        menu.add_cascade(label="Edit", menu=edit)
-
-        # Adds a button in the menu which close the program
-        exit = Menu(menu)
-        menu.add_command(label="exit", command=self.client_exit)
-
-    def client_exit(self):
-        exit()
+class CustomPopup(Popup):
+    pass
 
 
-root = Tk()
+class MasterLayout(BoxLayout):
+    checkbox_is_active = ObjectProperty(False)
 
-root.geometry("400x600")
+    def checkbox_18_clicked(self, instance, value):
+        if value is True:
+            print("Checkbox checked")
+        else:
+            print("Checkbox is Unchecked")
 
-app = Window(root)
 
-root.mainloop()
+class MasterApp(App):
+    def build(self):
+        return MasterLayout()
+
+
+master_app = MasterApp()
+master_app.run()
