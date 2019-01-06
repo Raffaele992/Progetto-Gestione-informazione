@@ -1,12 +1,6 @@
-import kivy
-kivy.require("1.10.1")
-
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
-from kivy.uix.gridlayout import GridLayout
-from kivy.uix.anchorlayout import AnchorLayout
 from kivy.properties import ObjectProperty
-from kivy.core.window import Window
 from kivy.uix.popup import Popup
 
 
