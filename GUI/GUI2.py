@@ -20,7 +20,7 @@ class ProjectDB(BoxLayout):
         pass
 
     def quit_DB(self):
-        pass
+        return exit()
 
 
 class ProjectDBApp(App):
