@@ -1,0 +1,103 @@
+#: import ListAdapter kivy.adapters.listadapter.ListAdapter
+#: import ListItemButton kivy.uix.listview.ListItemButton
+
+ProjectDB:
+
+<ProjectDB>:
+    orientation: "vertical"
+    padding: 10
+    spacing: 10
+
+    author_text_input: author
+    title_text_input: title
+    year_text_input: year
+
+    BoxLayout:
+        orientation: "vertical"
+        size_hint_y: None
+        height: 200
+
+        Label:
+            text: "Author:"
+            color: (0,0,0,1)
+        TextInput:
+            id: author
+
+        Label:
+            text: "Title:"
+            color: (0,0,0,1)
+
+        TextInput:
+            id: title
+
+        Label:
+            text: "Year:"
+            color: (0,0,0,1)
+        TextInput:
+            id: year
+
+    BoxLayout:
+        padding: 10
+        spacing: 10
+
+        Label:
+            text: "Look into:"
+            size_hint_x: 0.1
+            color: (0,0,0,1)
+
+        GridLayout:
+            padding: 10
+            spacing: 10
+            cols:6
+            row: 2
+
+
+            CheckBox:
+
+            Label:
+                text: "PhD thesis"
+                color: (0,0,0,1)
+            CheckBox:
+
+            Label:
+                text: "Master Thesis"
+                color: (0,0,0,1)
+
+            CheckBox:
+                color: (0,0,0,1)
+            Label:
+                text: " Book"
+                color: (0,0,0,1)
+
+            CheckBox:
+
+            Label:
+                text: " Article"
+                color: (0,0,0,1)
+            CheckBox:
+
+            Label:
+                text: " CCCC"
+                color: (0,0,0,1)
+
+    BoxLayout:
+        size_hint_y: None
+        height: "40dp"
+
+        Button:
+            text: "Search"
+            size_hint_x: 15
+            on_press: root.search_DB()
+            color: (0,0,0,1)
+
+        Button:
+            text: "Reset"
+            size_hint_x: 15
+            on_press: root.reset_search_DB()
+            color: (0,0,0,1)
+
+        Button:
+            text: "Quit"
+            size_hint_x: 15
+            on_press: root.quit_DB()
+            color: (0,0,0,1)
