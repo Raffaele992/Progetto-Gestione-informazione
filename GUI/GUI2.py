@@ -11,7 +11,8 @@ class DBListButton(ListItemButton):
 class ProjectDB(BoxLayout):
     author_text_input = ObjectProperty()
     title_text_input = ObjectProperty()
-    year_text_input = ObjectProperty
+    year_from_text_input = ObjectProperty()
+    year_to_text_input = ObjectProperty()
 
     def search_DB(self):
         pass

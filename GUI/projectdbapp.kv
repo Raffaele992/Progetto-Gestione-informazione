@@ -1,6 +1,15 @@
 #: import ListAdapter kivy.adapters.listadapter.ListAdapter
 #: import ListItemButton kivy.uix.listview.ListItemButton
 
+<CustLabel@Label>:
+    color: 0,0,0,1
+
+<CustButton@Button>:
+    color: 0,0,0,1
+    bold: True
+
+
+
 ProjectDB:
 
 <ProjectDB>:
@@ -10,98 +19,110 @@ ProjectDB:
 
     author_text_input: author
     title_text_input: title
-    year_text_input: year
+    year_from_text_input: year_from
+    year_to_text_input: year_to
 
     BoxLayout:
         orientation: "vertical"
         size_hint_y: None
-        height: 200
+        height: 165
 
-        Label:
+        CustLabel:
             text: "Author:"
-            color: (0,0,0,1)
+            
         TextInput:
             id: author
 
-        Label:
+        CustLabel:
             text: "Title:"
-            color: (0,0,0,1)
+            
 
         TextInput:
             id: title
 
-        Label:
+        CustLabel:
             text: "Year:"
-            color: (0,0,0,1)
-        TextInput:
-            id: year
+            
+
+        BoxLayout:
+            CustLabel
+                text: "From:"
+            TextInput:
+                id: year_from
+
+            CustLabel
+                text: "To"
+            TextInput:
+                id: year_to
+
+
+
+
 
     BoxLayout:
         padding: 10
         spacing: 10
 
-        Label:
+        CustLabel:
             text: "Look into:"
             size_hint_x: 0.1
-            color: (0,0,0,1)
+            
 
         GridLayout:
             padding: 10
             spacing: 10
-            cols:6
-            row: 2
+            cols:10
+            row: 1
 
 
             CheckBox:
 
-            Label:
+            CustLabel:
                 text: "PhD thesis"
-                color: (0,0,0,1)
+                
             CheckBox:
 
-            Label:
+            CustLabel:
                 text: "Master Thesis"
-                color: (0,0,0,1)
+                
 
             CheckBox:
 
-            Label:
+            CustLabel:
                 text: " Book"
-                color: (0,0,0,1)
+                
 
             CheckBox:
 
-            Label:
+            CustLabel:
                 text: " Article"
-                color: (0,0,0,1)
+                
             CheckBox:
 
-            Label:
+            CustLabel:
                 text: "Incollection"
-                color: (0,0,0,1)
 
     BoxLayout:
         size_hint_y: None
         height: "40dp"
 
-        Button:
+        CustButton:
             text: "Search"
             size_hint_x: 15
-            color: (0,0,0,1)
+            
             background_normal: "blue"
             background_color: 1, .3, .4, .85
-            bold: True
             on_press: root.search_DB()
 
-        Button:
+        CustButton:
             text: "Reset"
             size_hint_x: 15
             on_press: root.reset_search_DB()
-            color: (0,0,0,1)
+            
             bold: True
-        Button:
+        CustButton:
             text: "Quit"
             size_hint_x: 15
             on_press: root.quit_DB()
-            color: (0,0,0,1)
+            
             bold: True
