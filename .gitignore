@@ -3,3 +3,6 @@ venv
 indexdir
 .gitignore
 .idea
+dblp.dtd
+prova.c
+prova_pars_multi.py

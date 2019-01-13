@@ -20,7 +20,7 @@ class ProjectDB(BoxLayout):
     def reset_search_DB(self):
         pass
 
-    def quit_DB(self):
+    def quit_DB(self)
         return exit()
 
 

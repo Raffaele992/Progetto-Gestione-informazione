@@ -101,7 +101,7 @@ class ArticleHandler(S.ContentHandler):
         writer.commit()
 
 
-start = time.clock()
+start = time.time()
 
 schema = Schema(title=TEXT(stored=True),
                 key=ID(stored=False),
@@ -142,5 +142,6 @@ print(ix.doc_count())
 #for result in results:
 #    print("Rank: %s Title: %s Author: %s" % (result.rank, result['title'], result['author']))
 
-end = time.clock()
-print(end-start)
+end = time.time()
+exec_time = end-start
+print(exec_time)
