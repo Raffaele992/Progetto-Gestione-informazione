@@ -110,7 +110,7 @@ schema = Schema(title=TEXT(stored=True),
                 type=KEYWORD(stored=True))
 
 ####### parsing and indexing
-
+ 
 if not os.path.exists("indexdir"):
     os.mkdir("indexdir")
 
@@ -125,9 +125,9 @@ parser.parse("dblp.xml")
 
 ###### search
 
-# ix=open_dir("indexdir")
-# print(ix.schema)
-# with ix.searcher() as searcher:
+#ix=open_dir("indexdir")
+#print(ix.schema)
+#with ix.searcher() as searcher:
 #     query = QueryParser("title", schema=ix.schema).parse(u"title:Design AND author:Baltasar")
 #     results = searcher.search(query,limit=None)
 #     print(len(results))
