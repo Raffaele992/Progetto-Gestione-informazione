@@ -123,7 +123,7 @@ parser.setFeature(S.handler.feature_external_ges, False)
 parser.setContentHandler(handler)
 parser.parse("dblp.xml")
 
-###### search
+####### search
 
 #ix=open_dir("indexdir")
 #print(ix.schema)

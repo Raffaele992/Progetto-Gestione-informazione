@@ -21,3 +21,4 @@ parser.parse("dblp.xml")
 end = time.clock()
 print(handler.tags)
 print(end-start)
+
