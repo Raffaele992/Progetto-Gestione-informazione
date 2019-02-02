@@ -387,7 +387,7 @@ with ix.searcher() as searcher:
      for i in results:
          print(i)
 
-##### show all of doc (careful here)
+###### show all of doc (careful here)
 #ix = open_dir('indexdir')
 #print(ix.doc_count())
 #results = ix.searcher().search(Every('title'))
